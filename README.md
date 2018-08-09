@@ -2,6 +2,12 @@
 
 This fork builds a variant Docker image with golang 1.10 installed, the sawtooth-sdk-go project premounted, and the sdk protos prebuilt.
 
+This image is publically consumable at [pa3ng/sawtooth-sdk-go](https://hub.docker.com/r/pa3ng/sawtooth-sdk-go/). To obtain this image, do:
+
+```
+docker pull pa3ng/sawtooth-sdk-go
+```
+
 ## Getting Started
 
 Build the Go SDK image
