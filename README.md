@@ -7,8 +7,10 @@ This fork builds a variant Docker image with golang 1.10 installed, the sawtooth
 Build the Go SDK image
 
 ```
-docker build . -t sawtooth-sdk-go
-docker run sawtooth-sdk-go
+> git clone https://github.com/pa3ng/sawtooth-sdk-go.git
+> cd sawtooth-sdk-go
+> docker build . -t sawtooth-sdk-go
+> docker run sawtooth-sdk-go
 ```
 
 This will build the protos / mocks and place them in the protobuf / mocks directory, respectively.
