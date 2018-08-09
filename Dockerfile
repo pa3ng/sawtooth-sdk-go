@@ -34,7 +34,7 @@ RUN echo "deb http://repo.sawtooth.me/ubuntu/ci xenial universe" >> /etc/apt/sou
  && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 8AA7AF1F1091A5FD \
  && apt-get update \
  && apt-get install -y -q \
-    golang-1.9-go \
+    golang-1.10-go \
     git \
     libssl-dev \
     libzmq3-dev \
@@ -49,7 +49,7 @@ RUN echo "deb http://repo.sawtooth.me/ubuntu/ci xenial universe" >> /etc/apt/sou
 
 ENV GOPATH=/go
 
-ENV PATH=$PATH:/go/bin:/usr/lib/go-1.9/bin
+ENV PATH=$PATH:/go/bin:/usr/lib/go-1.10/bin
 
 RUN mkdir /go
 
@@ -64,6 +64,6 @@ RUN go get -u \
 
 RUN mkdir -p /go/src/github.com/hyperledger/sawtooth-sdk-go
 
-WORKDIR /go/src/github.com/hyperledger/sawtooth-sdk-go/
+RUN git clone https://github.com/hyperledger/sawtooth-sdk-go.git /go/src/github.com/hyperledger/sawtooth-sdk-go/
 
-CMD go generate
+RUN cd /go/src/github.com/hyperledger/sawtooth-sdk-go &&  go generate
