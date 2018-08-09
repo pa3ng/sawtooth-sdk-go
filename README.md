@@ -10,7 +10,7 @@ This image is publically available at [pa3ng/sawtooth-sdk-go](https://hub.docker
 
 ## Build image from project
 
-Build the Go SDK image locally
+Build the SDK image locally
 
 ```
 > git clone https://github.com/pa3ng/sawtooth-sdk-go.git
