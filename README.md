@@ -1,6 +1,6 @@
 # sawtooth-sdk-go
 
-This fork builds a variant Docker image with golang 1.10 installed and with the sawtooth-sdk-go project premounted.
+This fork builds a variant Docker image with golang 1.10 installed, the sawtooth-sdk-go project premounted, and the protos prebuilt.
 
 ## Getting Started
 
